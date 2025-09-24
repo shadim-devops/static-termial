@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Static Linux Terminal (Demo)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="topbar">
+      <div class="dots">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="title">devops@demo: ~ — static terminal</div>
+      <button id="copyAll" title="Copy output">Скопировать вывод</button>
+    </header>
+
+    <section id="terminal" class="terminal" aria-live="polite"></section>
+
+    <form id="cmdForm" autocomplete="off" spellcheck="false">
+      <label for="cmd" class="prompt"><span class="user">devops</span>@<span class="host">demo</span>:<span class="path">~</span>$</label>
+      <input id="cmd" name="cmd" type="text" placeholder="Введите команду (help для справки)" />
+    </form>
+  </main>
+
+  <footer class="footer">
+    <small>Static terminal demo. Команды не выполняются реально (клиентская эмуляция).</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
